@@ -10,7 +10,7 @@ class ResponsivePageDesign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ResponsivePage(
+    return const ResponsiveBuilder(
       mobileScreen: MobileScreen(),
       tabletScreen: TabletScreen(),
       desktopScreen: DesktopScreen(),

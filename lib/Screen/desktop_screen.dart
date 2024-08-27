@@ -16,10 +16,11 @@ class DesktopScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 80,
+          toolbarHeight: 100,
           leadingWidth: 150,
           leading: Padding(
-            padding: const EdgeInsets.only(left: 16.0, top: 10.0, bottom: 10.0),
+            padding: const EdgeInsets.only(
+                left: 30, top: 10, bottom: 10.0,),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +61,7 @@ class DesktopScreen extends StatelessWidget {
           ),
           actions: const [
             Padding(
-              padding: EdgeInsets.only(right: 16.0, top: 10.0, bottom: 10.0),
+              padding: EdgeInsets.only(right: 30, top: 30, bottom: 10.0),
               child: Row(
                 children: [
                   Text('Episodes'),
