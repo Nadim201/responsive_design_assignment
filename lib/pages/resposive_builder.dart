@@ -16,7 +16,7 @@ class ResponsivePage extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size.width;
     if (screenSize < 480) {
       return mobileScreen;
-    } else if (screenSize > 481 && screenSize < 768) {
+    } else if (screenSize > 500 && screenSize < 768) {
       return tabletScreen;
     }
     return desktopScreen;

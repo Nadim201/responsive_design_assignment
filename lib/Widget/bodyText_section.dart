@@ -7,8 +7,8 @@ class BodytextSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    double titleText = width > 768 ? 32 : 24;
-    double bodyText = width < 480 ? 14 : 16;
+    double titleText = width > 768 ? 28 : 24;
+    double bodyText = width < 480 ? 14 : 18;
 
     return Padding(
       padding: const EdgeInsets.all(defaultPadding),

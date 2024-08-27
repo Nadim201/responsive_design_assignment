@@ -63,13 +63,13 @@ class MobileScreen extends StatelessWidget {
         body: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: 20,
-            vertical: height * 0.15, // Adjusted vertical padding
+            vertical: height * 0.1, // Adjusted vertical padding
           ),
           child: Column(
             children: [
               const BodytextSection(),
               SizedBox(
-                height: height * 0.1,
+                height: height * 0.05,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: width * 0.1),
