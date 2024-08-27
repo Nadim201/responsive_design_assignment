@@ -61,7 +61,7 @@ class TabletScreen extends StatelessWidget {
           actions: const [
             Padding(
               padding: EdgeInsets.only(right: 16.0, top: 10.0, bottom: 10.0),
-              child: Row(
+              child: Column(
                 children: [
                   Text('Episodes'),
                   SizedBox(width: 20),
@@ -76,16 +76,17 @@ class TabletScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: height * 0.07,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            padding:
+                EdgeInsets.symmetric(horizontal: 20, vertical: height * 0.2),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const BodytextSection(),
+                const Expanded(
+                  flex: 4,
+                  child: BodytextSection(),
+                ),
                 SizedBox(
-                  height: height * 0.1,
+                  width: width * 0.1,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: width * 0.1),

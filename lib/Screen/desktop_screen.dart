@@ -82,7 +82,7 @@ class DesktopScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Expanded(
-                  flex: 3,
+                  flex: 4,
                   child: BodytextSection(),
                 ),
                 SizedBox(
