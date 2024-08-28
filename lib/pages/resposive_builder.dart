@@ -14,9 +14,9 @@ class ResponsiveBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size.width;
-    if (screenSize < 480) {
+    if (screenSize < 599) {
       return mobileScreen;
-    } else if (screenSize > 481 && screenSize < 1080) {
+    } else if (screenSize >600 && screenSize < 1025) {
       return tabletScreen;
     }
     return desktopScreen;
