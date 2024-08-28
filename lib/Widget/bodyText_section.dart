@@ -15,9 +15,9 @@ class BodytextSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: isMobile
+      padding: !isDesktop
           ? const EdgeInsets.symmetric(
-              vertical: 10,
+              vertical: 50,
               horizontal: 30,
             )
           : const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
@@ -80,7 +80,8 @@ class BodytextSection extends StatelessWidget {
 
   SizedBox elevatedButton() {
     return SizedBox(
-      width: isMobile ? double.infinity : 250,
+      width: isMobile ? double.infinity : 300,
+      height: isMobile ? 35 : 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             shape:
@@ -88,7 +89,10 @@ class BodytextSection extends StatelessWidget {
             backgroundColor: bottomColor,
             foregroundColor: whiteColor),
         onPressed: () {},
-        child: const Text('Join Course'),
+        child: Text(
+          'Join Course',
+          style: TextStyle(fontSize: isMobile ? 16 : 30),
+        ),
       ),
     );
   }
