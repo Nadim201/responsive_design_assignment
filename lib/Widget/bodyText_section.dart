@@ -16,79 +16,69 @@ class BodytextSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: isMobile
-          ? const EdgeInsets.symmetric(horizontal: 30)
-          : const EdgeInsets.symmetric(horizontal: 100),
+          ? const EdgeInsets.symmetric(
+              vertical: 10,
+              horizontal: 30,
+            )
+          : const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
       child: !isDesktop
-          ? SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    textAlign: TextAlign.center,
-                    'Build Stunning Apps\nwith Confidence',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: isMobile ? 24 : 60),
-                  ),
-                  const SizedBox(
-                    height: defaultPadding,
-                  ),
-                  Text(
-                    textAlign: TextAlign.center,
-                    'Are you ready to dive into the world of mobile app development? Our comprehensive Flutter course is designed to help you master the skills you need to build beautiful, high-performance apps for both iOS and Android.',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: isMobile ? 14 : 24,
-                        wordSpacing: 0.4),
-                  ),
-                  const SizedBox(
-                    height: 60,
-                  ),
-                  elevatedBotton(),
-                ],
-              ),
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SingleChildScrollView(
+                  child: bodyTextSection(),
+                ),
+                elevatedButton(),
+              ],
             )
           : Row(
-              mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Flexible(
                   flex: 4,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        textAlign: TextAlign.start,
-                        'Build Stunning Apps\nwith Confidence',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: isMobile ? 30 : 60),
-                      ),
-                      const SizedBox(
-                        height: defaultPadding,
-                      ),
-                      Text(
-                        'Are you ready to dive into the world of mobile app development? Our comprehensive Flutter course is designed to help you master the skills you need to build beautiful, high-performance apps for both iOS and Android.',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: isMobile ? 14 : 24,
-                            wordSpacing: 0.4),
-                      ),
-                    ],
-                  ),
+                  child: bodyTextSection(),
                 ),
                 const Spacer(),
-                elevatedBotton(),
+                elevatedButton(),
               ],
             ),
     );
   }
 
-  SizedBox elevatedBotton() {
+  Column bodyTextSection() {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment:
+          isDesktop ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+      children: [
+        Text(
+          textAlign: isDesktop ? TextAlign.start : TextAlign.center,
+          'Build Stunning Apps\nwith Confidence',
+          style: TextStyle(
+              fontWeight: FontWeight.w900, fontSize: isMobile ? 24 : 60),
+        ),
+        const SizedBox(
+          height: defaultPadding,
+        ),
+        Text(
+          textAlign: isDesktop ? TextAlign.start : TextAlign.center,
+          'Are you ready to dive into the world of mobile app development? Our comprehensive Flutter course is designed to help you master the skills you need to build beautiful, high-performance apps for both iOS and Android.',
+          style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: isMobile ? 14 : 24,
+              wordSpacing: 0.4),
+        ),
+        const SizedBox(
+          height: 60,
+        ),
+      ],
+    );
+  }
+
+  SizedBox elevatedButton() {
     return SizedBox(
       width: isMobile ? double.infinity : 250,
       child: ElevatedButton(

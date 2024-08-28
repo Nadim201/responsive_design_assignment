@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Widget/CostomAppBar.dart';
 import '../Widget/bodyText_section.dart';
 
 class DesktopScreen extends StatelessWidget {
@@ -7,18 +8,23 @@ class DesktopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Expanded(
-          child: BodytextSection(
+    return const Scaffold(
+      body: Column(
+        children: [
+          CustomAppBar(
             isMobile: false,
             isTablet: false,
             isDesktop: true,
           ),
-        )
-      ],
+          Expanded(
+            child: BodytextSection(
+              isMobile: false,
+              isTablet: false,
+              isDesktop: true,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -51,11 +51,11 @@ class DrawerSection extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.video_library),
+            leading: Icon(Icons.live_tv),
             title: Text('Episodes'),
           ),
           ListTile(
-            leading: Icon(Icons.message),
+            leading: Icon(Icons.info_outline),
             title: Text('Abouts'),
           ),
           ListTile(
