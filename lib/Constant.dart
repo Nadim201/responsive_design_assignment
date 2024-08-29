@@ -7,3 +7,4 @@ const Color whiteColor2 = Colors.white70;
 const Color bottomColor = Colors.indigoAccent;
 
 const double defaultPadding = 16.0;
+//
