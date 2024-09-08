@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_design_assignment/Constant.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar(
@@ -18,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
       child: Padding(
         padding: isMobile
             ? const EdgeInsets.symmetric(horizontal:16,vertical: 10)
-            : const EdgeInsets.symmetric(horizontal: 80, vertical: 30),
+            : const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,

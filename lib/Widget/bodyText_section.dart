@@ -20,7 +20,7 @@ class BodytextSection extends StatelessWidget {
               vertical: 50,
               horizontal: 30,
             )
-          : const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+          : const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
       child: !isDesktop
           ? Center(
             child: SingleChildScrollView(
