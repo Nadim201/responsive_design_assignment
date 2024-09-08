@@ -18,36 +18,41 @@ class BodytextSection extends StatelessWidget {
       padding: !isDesktop
           ? const EdgeInsets.symmetric(
               vertical: 50,
-              horizontal: 30,
+              horizontal: 50,
             )
           : const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
       child: !isDesktop
-          ? Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SingleChildScrollView(
-                  child: bodyTextSection(),
+          ? Center(
+            child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    bodyTextSection(),
+                    elevatedButton(),
+                  ],
                 ),
-                elevatedButton(),
-              ],
-            )
-          : Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Flexible(
-                  flex: 4,
-                  child: bodyTextSection(),
-                ),
-                const Spacer(),
-                elevatedButton(),
-              ],
+              ),
+          )
+          : Center(
+              // Center widget to ensure centering
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Flexible(
+                    flex: 4,
+                    child: bodyTextSection(),
+                  ),
+                  const Spacer(),
+                  elevatedButton(),
+                ],
+              ),
             ),
     );
   }
 
-  Column bodyTextSection() {
+  Widget bodyTextSection() {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +83,7 @@ class BodytextSection extends StatelessWidget {
     );
   }
 
-  SizedBox elevatedButton() {
+  Widget elevatedButton() {
     return SizedBox(
       width: isMobile ? double.infinity : 300,
       height: isMobile ? 35 : 50,
@@ -91,10 +96,9 @@ class BodytextSection extends StatelessWidget {
         onPressed: () {},
         child: Text(
           'Join Course',
-          style: TextStyle(fontSize: isMobile ? 16 : 30),
+          style: TextStyle(fontSize: isMobile ? 16 : 26),
         ),
       ),
     );
   }
 }
-//

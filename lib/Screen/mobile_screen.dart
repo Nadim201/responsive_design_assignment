@@ -14,21 +14,24 @@ class MobileScreen extends StatelessWidget {
         drawer: Drawer(
           child: DrawerSection(),
         ),
-        body: Column(
-          children: [
-            CustomAppBar(
-              isMobile: true,
-              isTablet: false,
-              isDesktop: false,
-            ),
-            Expanded(
-              child: BodytextSection(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomAppBar(
                 isMobile: true,
                 isTablet: false,
                 isDesktop: false,
               ),
-            )
-          ],
+              Expanded(
+                child: BodytextSection(
+                  isMobile: true,
+                  isTablet: false,
+                  isDesktop: false,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

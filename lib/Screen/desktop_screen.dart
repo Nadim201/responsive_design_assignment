@@ -9,7 +9,7 @@ class DesktopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
+      body: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomAppBar(
             isMobile: false,

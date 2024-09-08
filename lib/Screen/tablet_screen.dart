@@ -10,17 +10,19 @@ class TabletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            CustomAppBar(isMobile: false, isTablet: true, isDesktop: false),
-            Expanded(
-              child: BodytextSection(
-                isMobile: false,
-                isTablet: true,
-                isDesktop: false,
-              ),
-            )
-          ],
+        body: Center(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CustomAppBar(isMobile: false, isTablet: true, isDesktop: false),
+              Expanded(
+                child: BodytextSection(
+                  isMobile: false,
+                  isTablet: true,
+                  isDesktop: false,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
