@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
     return SizedBox(
       child: Padding(
         padding: isMobile
-            ? const EdgeInsets.symmetric(horizontal:10,vertical: 10)
+            ? const EdgeInsets.symmetric(horizontal:16,vertical: 10)
             : const EdgeInsets.symmetric(horizontal: 80, vertical: 30),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

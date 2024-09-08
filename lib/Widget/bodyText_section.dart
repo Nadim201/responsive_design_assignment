@@ -18,7 +18,7 @@ class BodytextSection extends StatelessWidget {
       padding: !isDesktop
           ? const EdgeInsets.symmetric(
               vertical: 50,
-              horizontal: 50,
+              horizontal: 30,
             )
           : const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
       child: !isDesktop
